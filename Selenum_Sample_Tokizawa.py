@@ -12,14 +12,14 @@ keyword = input("検索ワードを入力してください：")
 chrome_service = fs.Service(executable_path=CHROMEDRIVER)
 browser = webdriver.Chrome(service=chrome_service)
  
-# Googleアクセス
-browser.get('https://www.google.com/')
+ # Googleアクセス
+ browser.get('https://www.google.com/')
 
-# サイト内検索ボックスのnameをセット
-search_box = browser.find_element(By.NAME, "q")
+ # サイト内検索ボックスのnameをセット
+ search_box = browser.find_element(By.NAME, "q")
 
-# 入力した検索ワードをサイト内検索に出力
-search_box.send_keys(keyword)
+ # 入力した検索ワードをサイト内検索に出力
+ search_box.send_keys(keyword)
 
-# 検索実行
-search_box.send_keys(Keys.RETURN)
+ # 検索実行
+ search_box.send_keys(Keys.RETURN)
